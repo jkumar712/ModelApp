@@ -1,4 +1,3 @@
-<button class="btn btn-default" {{action "addData"}}>Add Book</button>
 <table class="table table-stripped">
   <thead>
     <th>Sl. No</th>
@@ -6,17 +5,16 @@
     <th>Author</th>
   </thead>
   <tbody>
-    {{#if print}}
+
     <tr>
-      {{#each model as |lib|}}
+      {{#each lib as |lib|}}
       <td>{{lib.SlNo}}</td>
       <td>{{lib.book}}</td>
       <td>{{lib.author}}</td>
       {{/each}}
     </tr>
-    {{/if}}
+
   </tbody>
 </table>
-
 
 {{yield}}
