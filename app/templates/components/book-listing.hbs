@@ -1,3 +1,5 @@
+
+<div class="container">
 <table class="table table-stripped">
   <thead>
     <th>Sl. No</th>
@@ -5,16 +7,16 @@
     <th>Author</th>
   </thead>
   <tbody>
+    {{#each lib as |lib index|}}
+      <tr>
+        <td>{{lib.i}}</td>
+        <td>{{lib.book}}</td>
+        <td>{{lib.author}}</td>
+      </tr>
+        {{/each}}
+    </tbody>
+  </table>
+  </div>
 
-    <tr>
-      {{#each lib as |lib|}}
-      <td>{{lib.SlNo}}</td>
-      <td>{{lib.book}}</td>
-      <td>{{lib.author}}</td>
-      {{/each}}
-    </tr>
-
-  </tbody>
-</table>
 
 {{yield}}
