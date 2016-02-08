@@ -1,12 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  isShow:false,
-
+  isDisp:false,
   actions:{
-    save(){
-      this.set("isShow",true);
-      alert("Success");
+    disp(){
+      this.set("isDisp",true);
     }
   }
 });

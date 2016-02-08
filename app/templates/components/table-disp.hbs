@@ -1,0 +1,27 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th {{action "save"}}>Sl.No</th>
+      <th>Name</th>
+      <th>number</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if isDisp}}
+      {{#each model as |user|}}
+        <tr>
+          <td>{{user.no}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.rno}}</td>
+        </tr>
+      {{/each}}
+    {{/if}}
+  </tbody>
+  <div class="container col-md-4">
+    <button class="btn btn-success btn-block btn-xs" {{action "disp"}}>Show</button>
+  </div>
+
+</table>
+
+{{yield}}
