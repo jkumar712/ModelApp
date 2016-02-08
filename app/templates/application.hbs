@@ -1,16 +1,14 @@
 <h2 id="title">Welcome to Library</h2>
 <div class="container">
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <a class="navbar-brand" href="#">Library</a>
-      <div class="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Books</a></li>
-          <li>{{#link-to "library"}}Library{{/link-to}}</li>
-          <li>{{#link-to "user"}}User
-          {{/link-to}}</li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <a class="navbar-brand" href="#">Library</a>
+        <div class="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Books</a></li>
+            <li>{{#link-to "user"}}User{{/link-to}}</li>
+            <li>{{#link-to "library"}}Library{{/link-to}}</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 {{outlet}}

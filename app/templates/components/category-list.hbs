@@ -1,0 +1,13 @@
+<ul>
+  {{#each-in categories as |category types|}}
+  <li>{{category}}
+    <ol>
+      {{#each types keys="@item" as |type|}}
+      <li>{{type}}</li>
+      {{/each}}
+    </ol>
+  </li>
+  {{/each-in}}
+</ul>
+
+{{yield}}
