@@ -6,13 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('library');
-  this.route('about');
-  this.route('contact');
-  this.route('workout', function() {
+  this.route('library', function() {
     this.route('new');
+    this.route('detail');
+    this.route('edit');
+    this.route('list');
   });
-  this.route('temp');
   this.route('user', function() {
     this.route('register');
   });
