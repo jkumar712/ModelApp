@@ -1,22 +1,38 @@
-{{#each model as |user|}}
-  <p>Name:{{user.name}}</p>
-  <p>Number:{{user.number}}</p>
-{{/each}}
-
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sl.No</th>
+        <th>Name</th>
+        <th>number</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |u index|}}
+        <tr>
+          <td>{{u.ind}}</td>
+          <td>{{u.uName}}</td>
+          <td>{{u.rNo}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 <div class="container col-md-4 col-md-offset-4">
-  <form>
+<h2 class="text-center">{{#link-to "user.register"}}Register{{/link-to}}</h2>
+  <!-- <form>
       <h2 class="text-center">Register</h2>
       <div class="form-group">
         <label for="name" class="sr-only ">Name</label>
-        <input class="form-control" id="name" type="text" placeholder="Name">
+        {{input class="form-control" value="name" type="text" placeholder="Name"}}
       </div>
       <div class="form-group">
         <label for="Register" id="number" class="sr-only">RegisterNo</label>
-        <input class="form-control" type="text" placeholder="RegisterNo">
+        {{input class="form-control" value="registerNo" type="number" placeholder="RegisterNo"}}
       </div>
       <div class="col-md-5 col-md-offset-3">
         <button class="btn btn-primary btn-block">Add</button>
       </div>
-  </form>
+    </form> -->
 </div>
-  {{outlet}}
+{{outlet}}
