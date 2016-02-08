@@ -1,0 +1,39 @@
+<div class="container">
+  <form>
+    <h4>New book</h4>
+    <div class="form-group">
+      <label for="book-name">Book Name</label>
+      {{input class="form-control" value=book}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input class="form-control" value=author}}
+    </div>
+    <button class="btn btn-default" {{action "addData"}}>Add Book</button>
+    </form>
+</div>
+
+<div class="container">
+<table class="table table-stripped">
+  <thead>
+    <th>Sl. No</th>
+    <th>Book</th>
+    <th>Author</th>
+  </thead>
+  <tbody>
+    {{#if show}}
+    {{#each bookarray as |a|}}
+      <tr>
+        <td>{{a.n}}</td>
+        <td>{{a.book}}</td>
+        <td>{{a.author}}</td>
+      </tr>
+      {{/each}}
+        {{/if}}
+    </tbody>
+  </table>
+  </div>
+
+
+{{yield}}
