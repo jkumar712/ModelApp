@@ -9,7 +9,7 @@ lib[0]={
 export default Ember.Route.extend(
 {
   model() {
-    return this.store.findAll('booklib');
+  //  return this.store.findAll('booklib');
   }
 
 });
