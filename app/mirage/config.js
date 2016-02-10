@@ -1,8 +1,8 @@
 
 export default function() {
-  this.get('/users',function(){
-    return{
-      data:[{
+
+  this.get('/users',function(db,request){
+    let users=[{
         type:'users',
         id: 1,
         attributes:{
@@ -26,7 +26,16 @@ export default function() {
           name: 'def',
           rno:111
         }
-     }]
-   };
+     }];
+     if(request.queryParams.id !== undefined) {
+      let filteredUsers = users.filter(function(i) {
+        return i.attributes.id.indexOf(request.queryParams.id) !== -1;
+      });
+      return { data: filteredUsers };
+    }
+    else {
+      return { data: users };
+      //console.log(db);
+    }
  });
 }

@@ -1,6 +1,14 @@
-{{#each models as |user|}}
-  <p>user.no</p>
-  <p>user.name</p>
-  <p>user.rno</p>
-{{/each}}
+
+<div class="container">
+  <h2>User Details</h2>
+  <ul>
+    <li>
+      <strong>SL.No:</strong>{{model.no}}
+    </li>
+    <li>Name:{{model.name}}</li>
+    <li>
+      <strong>Number:</strong>{{model.rno}}
+    </li>
+  </ul>
+</div>
 {{outlet}}
