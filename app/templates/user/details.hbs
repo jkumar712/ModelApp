@@ -1,0 +1,20 @@
+
+<div class="container col-md-offset-5">
+  <h2>User Details</h2>
+  <ul class="list-unstyled col-md-10">
+    <li>
+      <strong>SL.No:</strong>{{model.no}}
+    </li>
+    <li>
+      <strong>Name:</strong>{{model.name}}
+    </li>
+    <li>
+      <strong>Number:</strong>{{model.rno}}
+    </li>
+    <li>
+      {{#link-to "user.edit" model.no}}Update{{/link-to}}
+    </li>
+  </ul>
+
+</div>
+{{outlet}}
