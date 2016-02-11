@@ -16,7 +16,7 @@ Router.map(function() {
     this.route('register');
     this.route('list');
     this.route('details',{path:'/details/:details_id'});
-    this.route('edit');
+    this.route('edit',{path:'/edit/:edit_id'});
   });
   this.route('library');
 });

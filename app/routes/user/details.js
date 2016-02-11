@@ -7,6 +7,6 @@ export default Ember.Route.extend({
       no: 1,
       name: 'jk'
     };*/
-    return this.store.findRecord('user',params.details_id);
+    return this.store.peekRecord('user',params.details_id);
   }
 });

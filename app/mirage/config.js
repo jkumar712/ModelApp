@@ -27,15 +27,15 @@ export default function() {
           rno:111
         }
      }];
-     if(request.queryParams.id !== undefined) {
-      let filteredUsers = users.filter(function(i) {
-        return i.attributes.id.indexOf(request.queryParams.id) !== -1;
-      });
-      return { data: filteredUsers };
-    }
-    else {
+    //  if(request.queryParams.id !== undefined) {
+    //   let filteredUsers = users.filter(function() {
+    //     return id.indexOf(request.queryParams.id) ;
+    //   });
+    //   return { data: filteredUsers };
+    // }
+    //else {
       return { data: users };
       //console.log(db);
-    }
+  //  }
  });
 }
