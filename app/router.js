@@ -8,14 +8,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('library', function() {
     this.route('new');
-    this.route('detail');
+    this.route('detail',{path:"/detail/:no"});
     this.route('edit');
     this.route('list');
   });
   this.route('user', function() {
     this.route('register');
   });
-  this.route('library');
 });
 
 export default Router;
