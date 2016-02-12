@@ -1,12 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  isShow:false,
 
+  isShow:false,
   actions:{
     save(){
       this.set("isShow",true);
       alert("Success");
+      console.log(this.number);
     }
   }
 });

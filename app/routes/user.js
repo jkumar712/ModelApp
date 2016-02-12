@@ -3,7 +3,7 @@ import Ember from 'ember';
 var person={};
 person.uName="aaabbb";
 person.ind=1;
-person.rNo=1;
+person.rno=1;
 user[i]=person;
 i++;
 */
