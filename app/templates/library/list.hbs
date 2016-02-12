@@ -1,1 +1,21 @@
+
+<div class="container">
+  <table class="table table-stripped">
+    <thead>
+      <th>Sl. No</th>
+      <th>Book</th>
+      <th>Author</th>
+    </thead>
+    <tbody>
+      {{#each model as |a|}}
+        <tr>
+          <td>{{a.no}}</td>
+          <td>{{#link-to "library.detail" a.no}}{{a.book}}{{/link-to}}</td>
+          <td>{{a.author}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
 {{outlet}}
